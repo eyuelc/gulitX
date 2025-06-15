@@ -1,0 +1,306 @@
+import tomato from '../assets/img/data/tomato.avif';
+import bananas from '../assets/img/data/banana.jpg';
+import onions from '../assets/img/data/ONIONS.jpg';
+import honey from '../assets/img/data/honey.jpg';
+import avocados from '../assets/img/data/avocado.jpg';
+import milk from '../assets/img/data/milk.jpg';
+import eggs from '../assets/img/data/brownEgg.jpg';
+import greenPeppers from '../assets/img/data/pepper.jpg';
+import teff from '../assets/img/data/teff.jpg';
+import lemons from '../assets/img/data/lemon.jpg';
+import injera from '../assets/img/data/injera.jpg';
+import greenBeans from '../assets/img/data/beans.webp';
+import apples from '../assets/img/data/apple.jpg';
+import carrots from '../assets/img/data/carrot.jpg';
+import coffee from '../assets/img/data/coffee.jpg';
+import water from '../assets/img/data/water.jpg';
+import yogurt from '../assets/img/data/holland.jpg';
+import pasta from '../assets/img/data/pasta.avif';
+import cabbage from '../assets/img/data/cabbege.webp';
+import oranges from '../assets/img/data/orange.avif';
+
+const groceryItems = [
+  {
+    id: 1,
+    name: "Tomatoes",
+    price: 45,
+    hasDiscount: true,
+    discountPrice: 35,
+    marketplaceName: "Blackrock PLC",
+    category: "Vegetables",
+    image: tomato,
+    inStock: true,
+    unit: "per kg",
+    rating: 5,
+    distanceKm: 2.1
+  },
+  {
+    id: 2,
+    name: "Bananas",
+    price: 30,
+    hasDiscount: false,
+    discountPrice: null,
+    marketplaceName: "Fresh Farms Ltd.",
+    category: "Fruits",
+    image: bananas,
+    inStock: true,
+    unit: "per dozen",
+    rating: 4,
+    distanceKm: 3.4
+  },
+  {
+    id: 3,
+    name: "Red Onions",
+    price: 50,
+    hasDiscount: true,
+    discountPrice: 40,
+    marketplaceName: "Gulit Wholesale",
+    category: "Vegetables",
+    image: onions,
+    inStock: false,
+    unit: "per kg",
+    rating: 5,
+    distanceKm: 1.8
+  },
+  {
+    id: 4,
+    name: "Bottled Honey",
+    price: 120,
+    hasDiscount: false,
+    discountPrice: null,
+    marketplaceName: "BeePure Ethiopia",
+    category: "Pantry",
+    image: honey,
+    inStock: true,
+    unit: "per bottle",
+    rating: 5,
+    distanceKm: 2.9
+  },
+  {
+    id: 5,
+    name: "Avocados",
+    price: 55,
+    hasDiscount: true,
+    discountPrice: 45,
+    marketplaceName: "Green Basket",
+    category: "Fruits",
+    image: avocados,
+    inStock: true,
+    unit: "per kg",
+    rating: 5,
+    distanceKm: 2.5
+  },
+  {
+    id: 6,
+    name: "Whole Milk",
+    price: 38,
+    hasDiscount: false,
+    discountPrice: null,
+    marketplaceName: "EthioDairy Co.",
+    category: "Dairy",
+    image: milk,
+    inStock: true,
+    unit: "per liter",
+    rating: 4,
+    distanceKm: 4.0
+  },
+  {
+    id: 7,
+    name: "Brown Eggs",
+    price: 65,
+    hasDiscount: true,
+    discountPrice: 55,
+    marketplaceName: "Gulit Fresh",
+    category: "Dairy",
+    image: eggs,
+    inStock: true,
+    unit: "per dozen",
+    rating: 4,
+    distanceKm: 1.6
+  },
+  {
+    id: 8,
+    name: "Green Peppers",
+    price: 25,
+    hasDiscount: false,
+    discountPrice: null,
+    marketplaceName: "Blackrock PLC",
+    category: "Vegetables",
+    image: greenPeppers,
+    inStock: true,
+    unit: "per kg",
+    rating: 3,
+    distanceKm: 3.3
+  },
+  {
+    id: 9,
+    name: "Teff Flour",
+    price: 80,
+    hasDiscount: true,
+    discountPrice: 70,
+    marketplaceName: "YegnaGrains",
+    category: "Pantry",
+    image: teff,
+    inStock: true,
+    unit: "per kg",
+    rating: 5,
+    distanceKm: 2.0
+  },
+  {
+    id: 10,
+    name: "Lemons",
+    price: 25,
+    hasDiscount: false,
+    discountPrice: null,
+    marketplaceName: "LimeMarket",
+    category: "Fruits",
+    image: lemons,
+    inStock: true,
+    unit: "per kg",
+    rating: 4,
+    distanceKm: 2.7
+  },
+  {
+    id: 11,
+    name: "Injera (10 pcs)",
+    price: 45,
+    hasDiscount: false,
+    discountPrice: null,
+    marketplaceName: "InjeraHome",
+    category: "Pantry",
+    image: injera,
+    inStock: true,
+    unit: "pack",
+    rating: 5,
+    distanceKm: 1.9
+  },
+  {
+    id: 12,
+    name: "Green Beans",
+    price: 33,
+    hasDiscount: true,
+    discountPrice: 28,
+    marketplaceName: "Gulit Wholesale",
+    category: "Vegetables",
+    image: greenBeans,
+    inStock: true,
+    unit: "per kg",
+    rating: 4,
+    distanceKm: 2.6
+  },
+  {
+    id: 13,
+    name: "Apples",
+    price: 60,
+    hasDiscount: false,
+    discountPrice: null,
+    marketplaceName: "Highland Fruits",
+    category: "Fruits",
+    image: apples,
+    inStock: true,
+    unit: "per kg",
+    rating: 5,
+    distanceKm: 3.8
+  },
+  {
+    id: 14,
+    name: "Carrots",
+    price: 35,
+    hasDiscount: false,
+    discountPrice: null,
+    marketplaceName: "Blackrock PLC",
+    category: "Vegetables",
+    image: carrots,
+    inStock: true,
+    unit: "per kg",
+    rating: 4,
+    distanceKm: 2.2
+  },
+  {
+    id: 15,
+    name: "Coffee Beans",
+    price: 150,
+    hasDiscount: true,
+    discountPrice: 135,
+    marketplaceName: "Ethiopia Coffee Hub",
+    category: "Beverages",
+    image: coffee,
+    inStock: true,
+    unit: "per 500g",
+    rating: 5,
+    distanceKm: 3.0
+  },
+  {
+    id: 16,
+    name: "Bottled Water",
+    price: 15,
+    hasDiscount: false,
+    discountPrice: null,
+    marketplaceName: "AquaPlus",
+    category: "Beverages",
+    image: water,
+    inStock: true,
+    unit: "per liter",
+    rating: 3,
+    distanceKm: 2.4
+  },
+  {
+    id: 17,
+    name: "Holland Yogurt",
+    price: 25,
+    hasDiscount: false,
+    discountPrice: null,
+    marketplaceName: "EthioDairy Co.",
+    category: "Dairy",
+    image: yogurt,
+    inStock: true,
+    unit: "per cup",
+    rating: 4,
+    distanceKm: 3.6
+  },
+  {
+    id: 18,
+    name: "Pasta",
+    price: 35,
+    hasDiscount: true,
+    discountPrice: 30,
+    marketplaceName: "FastPantry",
+    category: "Pantry",
+    image: pasta,
+    inStock: true,
+    unit: "per pack",
+    rating: 4,
+    distanceKm: 2.3
+  },
+  {
+    id: 19,
+    name: "Cabbage",
+    price: 28,
+    hasDiscount: false,
+    discountPrice: null,
+    marketplaceName: "Green Basket",
+    category: "Vegetables",
+    image: cabbage,
+    inStock: true,
+    unit: "per kg",
+    rating: 4,
+    distanceKm: 1.7
+  },
+  {
+    id: 20,
+    name: "Oranges",
+    price: 50,
+    hasDiscount: true,
+    discountPrice: 40,
+    marketplaceName: "Fresh Farms Ltd.",
+    category: "Fruits",
+    image: oranges,
+    inStock: true,
+    unit: "per kg",
+    rating: 5,
+    distanceKm: 2.8
+  }
+];
+
+
+export default groceryItems;
