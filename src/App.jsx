@@ -1,23 +1,23 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 import Nav from './components/nav'
-import Hero from './components/hero'
-import WhatWeOffer from './components/whatweoffer'
-import Nearu from './components/nearu'
-import Hiw from './components/howItWorks'
 import Footer from './components/footer'
+import Home from './pages/home'
+import Shop from './pages/shop'
+
 
 function App() {
 
 
   return (
-    <>
+    <Router>
       <Nav/>
-      <Hero/>
-      <WhatWeOffer/>
-      <Nearu/>
-      <Hiw />
+      <Routes>
+        <Route path='/' element={<Home />}/>
+        <Route path='/shop' element={<Shop />}/>
+      </Routes>
       <Footer />
-    </>
+    </Router>
     
   )
 }
