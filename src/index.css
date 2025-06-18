@@ -6,9 +6,12 @@
 
 
 
+
 body{
-  background-color: rgb(255, 239, 222);
-  font-family: 'Nunito', sans-serif;
+  background-color: rgb(242, 242, 242);
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  padding-top: 5rem;
 }
 
 .selected{
@@ -41,4 +44,58 @@ body{
   opacity: 0.7;
 }
 
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.2s ease;
+}
+
+input[type="checkbox"]:hover {
+  border-color: #4ade80; /* hover green */
+}
+
+input[type="checkbox"]:checked {
+  background-color: transparent;
+  border-color: #4ade80;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid #22c55e; /* checkmark green */
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.clip-diagonal {
+  clip-path: polygon(
+    0% 0%,
+    35% 0%, 
+    30% 50px,    
+    100% 50px, 
+    100% 100%,  
+    0% 100%    
+  );
+}
+
+.clip-right-slant {
+  clip-path: polygon(
+    0 0,     
+    95% 0,     
+    100% 100%,  
+    0 100%       
+  );
+}
 

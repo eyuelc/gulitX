@@ -33,31 +33,42 @@ function Hiw () {
             </div>
             <p>Ready to get started?</p>
             <button className='mb-[2rem] shop bg-gradient-to-r from-green-500 to-green-800 cursor-pointer p-[0.7rem] rounded-[1rem] text-[14px] text-white font-bold'>Start Shopping Now</button>
-            <div className="flex flex-col justify-around items-center h-[400px] bg-gradient-to-r from-green-400 to-green-800 w-full">
-                <p className="text-[2rem] text-white">STAY FRESH WITH GULITX</p>
-                <div className="flex text-white gap-[5rem]">
+            
+            <div className="relative w-full overflow-visible">
+                <div className="clip-right-slant rounded z-50 w-[37%] h-[80px] gap-[1rem] bg-gradient-to-r from-orange-400 to-red-500 text-white p-8 flex items-center justify-end absolute top-0 left-0">
+                    <i className="fa-solid fa-phone text-[1.2rem] bg-[rgba(222,222,222,0.51)] p-[1rem] rounded-full"></i>
+                    <div>
+                    <p>Get in touch</p>
+                    <p className="text-[1.2rem] font-bold">+251-911-234-567</p>
+                    </div>
+                </div>
+
+                <div className="pt-[4rem] clip-diagonal flex flex-col justify-around items-center h-[470px] bg-gradient-to-r from-green-400 to-green-800 w-full relative">
+                    <p className="text-[2rem] text-white">STAY FRESH WITH GULITX</p>
+                    <div className="flex text-white gap-[5rem]">
                     <div className="flex flex-col items-center">
                         <p className='text-[27px] flex items-center justify-center bg-[rgba(255,255,255,0.48)] p-[2rem] h-[30px] w-[30px] rounded-[50%]'>%</p>
                         <p className='text-[1.4rem]'>Exclusive Discounts</p>
-                        <p>Up to 30% off weakly deals</p>
+                        <p>Up to 30% off weekly deals</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <p className='text-[27px] flex items-center justify-center bg-[rgba(255,255,255,0.48)] p-[2rem] h-[30px] w-[30px] rounded-[50%]'><i class="fa-solid fa-bell"></i></p>
+                        <p className='text-[27px] flex items-center justify-center bg-[rgba(255,255,255,0.48)] p-[2rem] h-[30px] w-[30px] rounded-[50%]'><i className="fa-solid fa-bell"></i></p>
                         <p className='text-[1.4rem]'>Fresh Arrival</p>
                         <p>Be first to know new products</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <p className='text-[27px] flex items-center justify-center bg-[rgba(255,255,255,0.48)] p-[2rem] h-[30px] w-[30px] rounded-[50%]'><i class="fa-solid fa-gift"></i></p>
+                        <p className='text-[27px] flex items-center justify-center bg-[rgba(255,255,255,0.48)] p-[2rem] h-[30px] w-[30px] rounded-[50%]'><i className="fa-solid fa-gift"></i></p>
                         <p className='text-[1.4rem]'>Recipe idea</p>
-                        <p>Weakly Ethiopian cooking tips</p>
+                        <p>Weekly Ethiopian cooking tips</p>
                     </div>
-                    
-                    
-
+                    </div>
+                    <input type="text" placeholder='Email' className='p-[1rem] h-[36px] w-[250px] bg-white rounded'/>
+                    <button className='subbut flex items-center justify-center text-black p-[1rem] h-[36px] w-[250px] bg-gradient-to-r from-orange-300 to-orange-500 rounded cursor-pointer'>
+                    Subscribe & get 20% off
+                    </button>
                 </div>
-                <input type="text" placeholder='Email' className='p-[1rem] h-[36px] w-[250px] bg-white rounded'/>
-                <button className='subbut flex items-center justify-center text-black p-[1rem] h-[36px] w-[250px] bg-gradient-to-r from-orange-300 to-orange-500 rounded cursor-pointer'>Subscribe & get 20% off</button>
-            </div>
+                </div>
+
         </div>
     )
 }

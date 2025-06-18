@@ -7,12 +7,7 @@ import feres from '../assets/img/feres.png'
 
 function Hero() {
     return (
-        <div className='flex flex-col justify-around items-center h-[620px] w-full relative mb-[4rem]'>
-            <input
-                type="text"
-                className="bg-white text-black rounded-[0.7rem] px-3 py-2 w-[500px] h-[35px] mb-[2.5rem]"
-                placeholder='Search on gulitX'
-            />
+        <div className='flex flex-col justify-around items-center h-[620px] w-full relative mb-[4rem] mt-[4rem]'>
             <div className="hero flex items-center justify-between w-full mt-[-20px]">
                 <div className="flex flex-col ml-[50px] h-full w-full justify-center items-center gap-[1rem]">
                     <h1 className="text-[2rem] text-green-600 font-extrabold">

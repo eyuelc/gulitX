@@ -8,7 +8,7 @@ import { useState } from 'react'
 
 function Shop () {
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 12;
+    const itemsPerPage = 9;
 
     const [minValue, setMinValue] = useState(10);
     const [maxValue, setMaxValue] = useState(800);
@@ -44,7 +44,7 @@ function Shop () {
             />
             </div>  
             <div className="flex w-full">
-                <div className="flex flex-col w-[20%] items-center border-r-2 border-gray-500">
+                <div className="flex flex-col w-[20%] items-center border-r-2 border-gray-500 sticky top-[5rem] h-screen overflow-y-auto">
                     <div>
                         <p className="text-[1.5rem]">Catagories</p>
                         <div className="flex flex-col w-full rounded [&>div]:cursor-pointer [&>div]:hover:bg-orange-50">
@@ -77,7 +77,7 @@ function Shop () {
                             </div>
                             <div className="flex p-[0.5rem] items-center justify-between">
                                 <div className="flex items-center gap-[1rem]">
-                                    <input type="checkbox"  className="w-5 h-5 accent-orange-500" />
+                                    <input type="checkbox"  className="" />
                                     <p className='text-gray-600'>Meat & Poultry</p>
                                 </div>
                                 
@@ -115,9 +115,9 @@ function Shop () {
                     </div>
                     
                 </div>
-                <div className="flex flex-col w-full ">
+                <div className="flex flex-col w-[85%]">
                     <div className="flex justify-center">
-                        <div className='flex flex-wrap w-[85%]'>
+                        <div className='flex flex-wrap justify-center w-full '>
                             {renderCards()}
                         </div>
                         
