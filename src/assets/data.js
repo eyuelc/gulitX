@@ -32,7 +32,7 @@ const groceryItems = [
     subCategory: "Red Vegetables",
     image: tomato,
     inStock: true,
-    unit: "per kg",
+    unit: "kg",
     rating: 5,
     distanceKm: 2.1
   },
@@ -48,7 +48,7 @@ const groceryItems = [
     subCategory: "Tropical Fruits",
     image: bananas,
     inStock: true,
-    unit: "per dozen",
+    unit: "dozen",
     rating: 4,
     distanceKm: 3.4
   },

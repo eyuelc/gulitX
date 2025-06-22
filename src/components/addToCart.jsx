@@ -19,22 +19,38 @@ export default function AddToCart({ id }) {
     setTimeout(() => {
       setIsOpen(false);
       setIsClosing(false);
-    }, 200); // Matches fade-out duration
+    }, 200); 
   };
 
   const increment = () => setQuantity(q => q + 1);
   const decrement = () => setQuantity(q => (q > 1 ? q - 1 : 1));
 
   const handleAdd = () => {
+    const newItem = { id: product.id, quantity };
+
+    const existing = JSON.parse(localStorage.getItem("orderedItems")) || [];
+
+    const existingItemIndex = existing.findIndex(item => item.id === newItem.id);
+
+    if (existingItemIndex !== -1) {
+
+        existing[existingItemIndex].quantity += newItem.quantity;
+    } else {
+        existing.push(newItem);
+    }
+
+    localStorage.setItem("orderedItems", JSON.stringify(existing));
+
     alert(`Added ${quantity} ${product.name}(s) to cart.`);
+
     close();
-  };
+    };
+
 
   if (!product) return null;
 
   return (
     <>
-      {/* Trigger button */}
       <button
         onClick={open}
         className="addCart flex items-center bg-orange-400 text-white px-4 py-2 rounded-md mt-4 hover:bg-red-600 cursor-pointer"
@@ -43,7 +59,6 @@ export default function AddToCart({ id }) {
         ADD TO CART
       </button>
 
-      {/* Modal */}
       {isOpen && (
         <div className={`fixed inset-0 z-[100000] flex items-center justify-center 
           ${isClosing ? 'fade-out' : 'fade-in'} backdrop-blur-sm bg-black/30`}>
