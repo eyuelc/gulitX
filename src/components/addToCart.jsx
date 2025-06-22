@@ -41,8 +41,6 @@ export default function AddToCart({ id }) {
 
     localStorage.setItem("orderedItems", JSON.stringify(existing));
 
-    alert(`Added ${quantity} ${product.name}(s) to cart.`);
-
     close();
     };
 

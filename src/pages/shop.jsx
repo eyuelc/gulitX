@@ -36,9 +36,9 @@ function Shop () {
         ));
     }
     return (
-        <div className="w-full"> 
+        <div className="w-full mt-[3rem]"> 
             <div className="flex w-full">
-                <div className="flex flex-col w-[20%] items-center border-gray-500 sticky top-[5rem] h-screen overflow-y-auto">
+                <div className="flex flex-col w-[20%] items-center border-gray-500 sticky top-[7rem] h-screen overflow-y-auto">
                     <div>
                         <p className="text-[1.5rem]">Catagories</p>
                         <div className="flex flex-col w-full rounded [&>div]:cursor-pointer [&>div]:hover:bg-orange-50">

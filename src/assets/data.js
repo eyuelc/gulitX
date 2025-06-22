@@ -64,7 +64,7 @@ const groceryItems = [
     subCategory: "Bulb Vegetables",
     image: onions,
     inStock: false,
-    unit: "per kg",
+    unit: "kg",
     rating: 5,
     distanceKm: 1.8
   },
@@ -80,7 +80,7 @@ const groceryItems = [
     subCategory: "Sweeteners",
     image: honey,
     inStock: true,
-    unit: "per bottle",
+    unit: "bottle",
     rating: 5,
     distanceKm: 2.9
   },
@@ -96,7 +96,7 @@ const groceryItems = [
     subCategory: "Oily Fruits",
     image: avocados,
     inStock: true,
-    unit: "per kg",
+    unit: "kg",
     rating: 5,
     distanceKm: 2.5
   },
@@ -112,7 +112,7 @@ const groceryItems = [
     subCategory: "Milk",
     image: milk,
     inStock: true,
-    unit: "per liter",
+    unit: "liter",
     rating: 4,
     distanceKm: 4.0
   },
@@ -128,7 +128,7 @@ const groceryItems = [
     subCategory: "Eggs",
     image: eggs,
     inStock: true,
-    unit: "per dozen",
+    unit: "dozen",
     rating: 4,
     distanceKm: 1.6
   },
@@ -144,7 +144,7 @@ const groceryItems = [
     subCategory: "Green Vegetables",
     image: greenPeppers,
     inStock: true,
-    unit: "per kg",
+    unit: "kg",
     rating: 3,
     distanceKm: 3.3
   },
@@ -160,7 +160,7 @@ const groceryItems = [
     subCategory: "Grains & Flour",
     image: teff,
     inStock: true,
-    unit: "per kg",
+    unit: "kg",
     rating: 5,
     distanceKm: 2.0
   },
@@ -176,7 +176,7 @@ const groceryItems = [
     subCategory: "Citrus Fruits",
     image: lemons,
     inStock: true,
-    unit: "per kg",
+    unit: "kg",
     rating: 4,
     distanceKm: 2.7
   },
@@ -208,7 +208,7 @@ const groceryItems = [
     subCategory: "Green Vegetables",
     image: greenBeans,
     inStock: true,
-    unit: "per kg",
+    unit: "kg",
     rating: 4,
     distanceKm: 2.6
   },
@@ -224,7 +224,7 @@ const groceryItems = [
     subCategory: "Temperate Fruits",
     image: apples,
     inStock: true,
-    unit: "per kg",
+    unit: "kg",
     rating: 5,
     distanceKm: 3.8
   },
@@ -240,7 +240,7 @@ const groceryItems = [
     subCategory: "Root Vegetables",
     image: carrots,
     inStock: true,
-    unit: "per kg",
+    unit: "kg",
     rating: 4,
     distanceKm: 2.2
   },
@@ -256,7 +256,7 @@ const groceryItems = [
     subCategory: "Coffee",
     image: coffee,
     inStock: true,
-    unit: "per 500g",
+    unit: "500g",
     rating: 5,
     distanceKm: 3.0
   },
@@ -272,7 +272,7 @@ const groceryItems = [
     subCategory: "Water",
     image: water,
     inStock: true,
-    unit: "per liter",
+    unit: "liter",
     rating: 3,
     distanceKm: 2.4
   },
@@ -288,7 +288,7 @@ const groceryItems = [
     subCategory: "Yogurt",
     image: yogurt,
     inStock: true,
-    unit: "per cup",
+    unit: "cup",
     rating: 4,
     distanceKm: 3.6
   },
@@ -304,7 +304,7 @@ const groceryItems = [
     subCategory: "Dry Goods",
     image: pasta,
     inStock: true,
-    unit: "per pack",
+    unit: "pack",
     rating: 4,
     distanceKm: 2.3
   },
@@ -320,7 +320,7 @@ const groceryItems = [
     subCategory: "Leafy Vegetables",
     image: cabbage,
     inStock: true,
-    unit: "per kg",
+    unit: "kg",
     rating: 4,
     distanceKm: 1.7
   },
@@ -336,7 +336,7 @@ const groceryItems = [
     subCategory: "Citrus Fruits",
     image: oranges,
     inStock: true,
-    unit: "per kg",
+    unit: "kg",
     rating: 5,
     distanceKm: 2.8
   }
