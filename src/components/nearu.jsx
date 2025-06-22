@@ -13,6 +13,7 @@ function renderDiscountCards() {
         .map((item, idx) => (
             <Card
                 key={idx}
+                id={item.id}
                 image={item.image}
                 name={item.name}
                 rating={item.rating}

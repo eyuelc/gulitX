@@ -1,7 +1,8 @@
-import react from 'react';
+import React from 'react';
 
 import star from '../assets/img/star.png';
 import cart from '../assets/img/cart.png';
+import AddToCart from './addToCart.jsx';
 
 function calcPerc(discountPrice, originalPrice) {
     return Math.round(((originalPrice - discountPrice) / originalPrice) * 100);
@@ -45,10 +46,7 @@ function Card(props) {
                 <p className='text-[12px] text-orange-600'>{props.marketplaceName}</p>
                 <p className='text-[12px] text-orange-600'>{props.distancekm}KM away</p>
             </div>
-            <button className='addCart flex items-center bg-orange-400 text-white px-4 py-2 rounded-md mt-4 hover:bg-red-600 cursor-pointer'>
-                <img src={cart} alt="" className="h-[1rem] w-[1rem] mr-[0.2rem]" />
-                ADD TO CART
-            </button>
+            <AddToCart id={props.id}/>
         </div>
     )
 }

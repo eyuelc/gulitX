@@ -2,6 +2,7 @@ import Card from '../components/card.jsx'
 import groceryItems  from '../assets/data'
 
 import { useState } from 'react'
+import DB from '../components/discBanner.jsx'
 
 
 
@@ -22,6 +23,7 @@ function Shop () {
         return currentItems.map((item, idx) => (
             <Card
                 key={idx}
+                id={item.id}
                 image={item.image}
                 name={item.name}
                 rating={item.rating}
@@ -34,56 +36,38 @@ function Shop () {
         ));
     }
     return (
-        <div className="w-full">
-            <div className="flex justify-center gap-[2rem]">
-                <button className="sort h-[2rem] w-[5rem] rounded-[0.5rem] bg-gradient-to-r from-orange-400 to-orange-200 hover:bg-gray-100 cursor-pointer"><i class="fa-solid fa-sort"></i>Sort</button>
-                <input
-                type="text"
-                className="bg-white text-black rounded-[0.7rem] px-3 py-2 w-[500px] h-[35px] mb-[2.5rem]"
-                placeholder='Search on gulitX'
-            />
-            </div>  
+        <div className="w-full"> 
             <div className="flex w-full">
-                <div className="flex flex-col w-[20%] items-center border-r-2 border-gray-500 sticky top-[5rem] h-screen overflow-y-auto">
+                <div className="flex flex-col w-[20%] items-center border-gray-500 sticky top-[5rem] h-screen overflow-y-auto">
                     <div>
                         <p className="text-[1.5rem]">Catagories</p>
                         <div className="flex flex-col w-full rounded [&>div]:cursor-pointer [&>div]:hover:bg-orange-50">
-                            <div className="flex p-[0.5rem] items-center justify-between">
-                                <div className="flex items-center gap-[1rem]">
-                                    <input type="checkbox"  className="w-5 h-5 accent-orange-500" />
-                                    <p className='text-gray-600'>Vegtables</p>
-                                </div>
-                            </div>
-                            <div className="flex p-[0.5rem] items-center justify-between">
-                                <div className="flex items-center gap-[1rem]">
-                                    <input type="checkbox"   className="w-5 h-5 accent-orange-500" />
-                                    <p className='text-gray-600'>Fruits</p>
-                                </div>
-                                
-                            </div>
-                            <div className="flex p-[0.5rem] items-center justify-between">
-                                <div className="flex items-center gap-[1rem]">
-                                    <input type="checkbox"   className="w-5 h-5 accent-orange-500" />
-                                    <p className='text-gray-600'>Grains</p>
-                                </div>
-                                
-                            </div>
-                            <div className="flex p-[0.5rem] items-center justify-between">
-                                <div className="flex items-center gap-[1rem]">
-                                    <input type="checkbox"   className="w-5 h-5 accent-orange-500" />
-                                    <p className='text-gray-600'>Diary & Eggs</p>
-                                </div>
-                                
-                            </div>
-                            <div className="flex p-[0.5rem] items-center justify-between">
-                                <div className="flex items-center gap-[1rem]">
-                                    <input type="checkbox"  className="" />
-                                    <p className='text-gray-600'>Meat & Poultry</p>
-                                </div>
-                                
-                            </div>
+                            <label className="flex p-[0.5rem] items-center gap-[1rem] cursor-pointer hover:bg-gray-100 transition rounded">
+                                <input type="checkbox" className="w-5 h-5 accent-orange-500" />
+                                <p className="text-gray-600">Vegetables</p>
+                            </label>
+
+                            <label className="flex p-[0.5rem] items-center gap-[1rem] cursor-pointer hover:bg-gray-100 transition rounded">
+                                <input type="checkbox" className="w-5 h-5 accent-orange-500" />
+                                <p className="text-gray-600">Fruits</p>
+                            </label>
+
+                            <label className="flex p-[0.5rem] items-center gap-[1rem] cursor-pointer hover:bg-gray-100 transition rounded">
+                                <input type="checkbox" className="w-5 h-5 accent-orange-500" />
+                                <p className="text-gray-600">Grains</p>
+                            </label>
+
+                            <label className="flex p-[0.5rem] items-center gap-[1rem] cursor-pointer hover:bg-gray-100 transition rounded">
+                                <input type="checkbox" className="w-5 h-5 accent-orange-500" />
+                                <p className="text-gray-600">Dairy & Eggs</p>
+                            </label>
+
+                            <label className="flex p-[0.5rem] items-center gap-[1rem] cursor-pointer hover:bg-gray-100 transition rounded">
+                                <input type="checkbox" className="w-5 h-5 accent-orange-500" />
+                                <p className="text-gray-600">Meat & Poultry</p>
+                            </label>
                         </div>
-                        <div className="flex flex-col">
+                        <div className="flex flex-col mt-[1rem]">
                             <p className="text-[1.5rem]">Price</p>
                             <div className="flex justify-between text-sm text-gray-700">
                                 <span>Min: {minValue}Br</span>
@@ -115,7 +99,7 @@ function Shop () {
                     </div>
                     
                 </div>
-                <div className="flex flex-col w-[85%]">
+                <div className="flex flex-col w-[85%] mb-[2rem]">
                     <div className="flex justify-center">
                         <div className='flex flex-wrap justify-center w-full '>
                             {renderCards()}
@@ -156,6 +140,7 @@ function Shop () {
                 
 
             </div>
+            <DB/>
         </div>
     )
 }
