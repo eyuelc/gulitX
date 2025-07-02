@@ -14,18 +14,13 @@ function Nav() {
         { label: 'Shop', path: '/shop' },
         { label: 'Cart', path: '/cart' },
         { label: 'My Orders', path: '/orders' },
-        { label: 'Wishlist', path: '/wishlist' },
     ];
 
     return (
         <div className="fixed top-0 left-0 w-full z-5000 bg-white border-b border-gray-300">
-            {/* Full width navbar background */}
-            
-            {/* Inner content container (70% centered) */}
             <div className="w-[70%] mx-auto">
             <div className="flex justify-between items-center py-2 border-b border-gray-200">
                 <img src={logo} alt="GulitX Logo" className="h-[40px]" />
-
                 <div className='flex justify-center'>
                 <input
                     type="text"

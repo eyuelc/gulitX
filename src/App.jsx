@@ -6,6 +6,7 @@ import Home from './pages/home'
 import Shop from './pages/shop'
 import Cart from './pages/cart'
 import MyOrder from './pages/myOrder';
+import ScrollToTop from './components/scrollToTop'; 
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Nav/>
       <Routes>
         <Route path='/' element={<Home />}/>
