@@ -1,7 +1,3 @@
-import React from 'react';
-
-import star from '../assets/img/star.png';
-import cart from '../assets/img/cart.png';
 import AddToCart from './addToCart.jsx';
 
 function calcPerc(discountPrice, originalPrice) {
@@ -24,7 +20,7 @@ function Card(props) {
                         {[...Array(props.rating)].map((_, i) => (
                             <img
                                 key={i}
-                                src={star}
+                                src="http://localhost:5000/img/star.png"
                                 alt=""
                                 className="h-[1rem] w-[1rem] mr-[0.2rem]"
                             />

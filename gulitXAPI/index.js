@@ -4,6 +4,7 @@ import { logger } from './middleware/logger.js';
 import { error } from './middleware/error.js';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv'
+import cors from 'cors';
 dotenv.config();
 const PORT = 5000;
 
@@ -11,6 +12,8 @@ const MONGODB_URI = process.env.MONGODB_URI;
 console.log(MONGODB_URI)
 
 const app = express();
+app.use(cors());
+
 app.use(express.json());
 app.use(logger)
 

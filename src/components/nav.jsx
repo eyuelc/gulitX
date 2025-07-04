@@ -1,13 +1,20 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/img/gulitX2.png';
-import user from '../assets/img/user.png';
-import cart from '../assets/img/cart.png';
-import notf from '../assets/img/notf.png';
+import React, { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 function Nav() {
+    const [searchTerm, setSearchTerm] = useState('');
     const location = useLocation();
     const currentPath = location.pathname;
+
+    const navigate = useNavigate();
+    const toShop = () => {
+        if (searchTerm.trim() !== '') {
+            navigate(`/shop?name=${encodeURIComponent(searchTerm.trim())}`);
+        } else {
+            navigate('/shop');
+        }
+    };
+
 
     const navItems = [
         { label: 'Home', path: '/' },
@@ -20,14 +27,18 @@ function Nav() {
         <div className="fixed top-0 left-0 w-full z-5000 bg-white border-b border-gray-300">
             <div className="w-[70%] mx-auto">
             <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                <img src={logo} alt="GulitX Logo" className="h-[40px]" />
+                <img src="http://localhost:5000/img/gulitX2.png" alt="GulitX Logo" className="h-[40px]" />
                 <div className='flex justify-center'>
                 <input
                     type="text"
                     className='border border-gray-400 px-4 h-[40px] w-[300px]'
                     placeholder='Search on gulitX'
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
                 />
-                <button className='border border-gray-400 w-[6rem] text-white bg-orange-400'>
+                <button 
+                onClick={toShop}
+                className='border border-gray-400 w-[6rem] text-white bg-orange-400 cursor-pointer'>
                     <i className="fa-solid fa-magnifying-glass"></i> Search
                 </button>
                 </div>
@@ -66,9 +77,9 @@ function Nav() {
                 </div>
 
                 <div className="flex gap-[30px]">
-                <img src={user} alt="" className="h-[20px]" />
-                <img src={cart} alt="" className="h-[20px]" />
-                <img src={notf} alt="" className="h-[20px]" />
+                <img src="http://localhost:5000/img/user.png"  alt="" className="h-[20px]" />
+                <img src="http://localhost:5000/img/cart.png" alt="" className="h-[20px]" />
+                <img src="http://localhost:5000/img/notf.png" alt="" className="h-[20px]" />
                 </div>
             </div>
             </div>
